@@ -1,0 +1,20 @@
+body{background-color:#F7ECDE;}
+h1{  font-family: "Pacifico", cursive; font-size: 50px; color: #352e28; position: relative;}
+h1::after{content: ""; position: absolute; background-color: #fec260; width: 100%; height: 25%; left: 0; bottom: 5px; z-index: -1; transition: all 0.5s;}
+h1:hover::after {height: 50%; }
+.main{border-top: 2px dotted black;}
+.style-h2 h2{ background-image:linear-gradient(to right ,#3ca55c,#b5ac49); background-clip: text ;color: transparent; font-size: 25px;  font-family: "Righteous", sans-serif;font-weight: bold; }
+.header{border-bottom:  2px dotted black;}
+h3,h4,h5,h6,p{  font-family: "PT Sans Caption", sans-serif;}
+h5{font-size: 16px;}
+.my-p{font-size: 21px; color: #352e28; }
+.my-border{border-bottom: 1px solid #DEE2E6 ;}
+.shape-3{background-color:#4db748; width: 20px; height: 20px; border-radius: 50%;}
+.shape-2{background-color:#febe2e; width: 20px; height: 20px; border-radius: 50%;}
+.shape-1{background-color:#f15f5d; width: 20px; height: 20px; border-radius: 50%;}
+.style-i i {color: darkred;}
+.style-i{border:  2px solid darkred; border-radius: 50%; width: 20px; height: 20px;}
+.my-cursol{cursor: pointer;}
+.fa-star{
+    color: #f7c242;
+}

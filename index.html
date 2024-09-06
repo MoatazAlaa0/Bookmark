@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="icon" href="image/bookmark.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Righteous&display=swap"
+        rel="styleshee">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="Css/all.min.css">
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/style.css">
+
+</head>
+
+<body>
+    <div class="container d-flex align-items-center justify-content-center flex-column mt-5 mb-4 pt-5 header ">
+
+        <h1 class="mb-3 ">Bookmarker</h1>
+        <div class="container mt-5 main mb-5">
+            <div class="text-center style-h2 mt-4  ">
+                <h2><i class="fa-solid fa-bookmark me-2"></i>Bookmark your favorite sites<i
+                        class="ms-2 fa-solid fa-bookmark"></i>
+                </h2>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="align-items-center d-flex">
+
+                        <h3 class="fs-6 fw-bold"> <i class="fa-solid fa-book-bookmark me-2"></i> Site Name</h3>
+                    </div>
+                    <div>
+                        <div>
+                            <input type="text" oninput="validateWebsite(this)" class=" form-control" id="bookmarkName"
+                                placeholder="Bookmark Name">
+                            <label for="bookmarkName"></label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="align-items-center d-flex">
+
+                        <h3 class="fs-6 fw-bold"> <i class="fa-solid fa-link me-2"></i> Site URL</h3>
+                    </div>
+                    <div>
+                        <div>
+                            <input type="text" oninput="validateWebsite(this)" class="form-control" id="bookmarkURL"
+                                placeholder="Website URL">
+                            <label for="bookmarkURL"></label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="align-items-center d-flex">
+
+                        <h3 class="fs-6 fw-bold"> <i class="fa-solid fa-search me-2"></i> Search Site name </h3>
+                    </div>
+                    <div>
+                        <input type="text" oninput="searchElements(this.value)" class="form-control" id="searchElements"
+                            placeholder="search by name">
+                        <label for="searchElements"></label>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div id="change">
+
+            <button onclick="addDetails()" class="btn btn-info px-5 mb-4">Submit</button>
+        </div>
+    </div>
+    </div>
+
+    <div class="container mb-5 ">
+        <div class="row bg-light p-2 my-border align-items-center justify-content-center text-center ">
+            <div class="col-2  ">
+                <div>
+        
+                    <h5 class=" fw-bold m-0">Fav</h5>
+                </div>
+            </div>
+            <div class="col-2  ">
+                <div>
+        
+                    <h5 class=" fw-bold m-0">Index</h5>
+                </div>
+            </div>
+            <div class="col-2 ">
+                <div>
+        
+                    <h5 class=" fw-bold m-0">Name</h5>
+                </div>
+            </div>
+            <div class="col-2 ">
+                <div>
+        
+                    <h5 class=" fw-bold m-0">Update</h5>
+                </div>
+            </div>
+            <div class="col-2  ">
+                <div>
+        
+                    <h5 class=" fw-bold m-0 ">Visit</h5>
+                </div>
+            </div>
+            
+            <div class="col-2 ">
+                <div>
+        
+                    <h5 class=" fw-bold m-0">Delete</h5>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row  " id="vip">
+
+
+        </div>
+
+
+    </div>
+    <div
+        class="layer top-0 bottom-0 start-0 position-fixed end-0 bg-black bg-opacity-50 d-none d-flex align-items-center justify-content-center">
+
+        <div class=" bg-white p-4 rounded-3 shadow-lg ">
+            <div class="d-flex align-items-center justify-content-between mb-4">
+                <div class=" d-flex align-items-center justify-content-center">
+                    <div class="shape-1 me-2">
+                    </div>
+                    <div class="shape-2 me-2">
+                    </div>
+                    <div class="shape-3 me-2">
+                    </div>
+
+                </div>
+                <div class="my-cursol">
+                    <i class="fa-solid fa-xmark fw-bold fs-3 "></i>
+                </div>
+            </div>
+
+            <p class="fw-bold mb-3 fs-5 my-p ">
+                Site Name or Url is not valid, Please follow the <br> rules below :</p>
+
+            <div class="d-flex  align-items-center  mb-3">
+                <div class="style-i d-flex align-items-center justify-content-center me-2">
+                    <i class="fa-solid fa-arrow-right fs-6 "></i>
+
+                </div>
+                <p class="mb-0">Site name must contain at least 3 characters</p>
+            </div>
+         
+                <div class=" d-flex align-items-center   me-2">
+                    <div class="style-i d-flex align-items-center justify-content-center me-2 "> 
+                        <i class="fa-solid fa-arrow-right fs-6"></i>
+                        
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center ">
+
+                        <p class="m-0 ">Site URL must be a valid one</p>
+                    </div>
+                </div>
+      
+
+        </div>
+    </div>
+  
+
+
+    <script src="Js/bootstrap.bundle.min.js"></script>
+    <script src="Js/index.Js"></script>
+</body>
+
+</html>
